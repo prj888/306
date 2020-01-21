@@ -1,4 +1,6 @@
-<!-- A bare bones web page to start SY306 assignments with -->
+<!-- SIGN UP form -->
+
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -18,20 +20,27 @@
 	</nav>
 
 <!-- Start main body of website -->
-<!-- Unordered list showing services  -->
-		<h3>Services</h3>
-		<ul style="list-style-type:disc;">
-			<li>Recreation Gear</li>
-			<li>Outdoor Activity Guides</li>
-			<li>Outdoor Education</li>
-			<li>Group Outings</li>
-		</ul>
 
-		<p> <a href="products.html">Products</a> <!-- link to products page -->
-		</p>
-		<p> <a href="../default.html">Main Landing Page</a>
-		<p> Find a place to get outdoors in one of these <a href="https://www.nps.gov/findapark/index.htm">National Parks</a>!</p>
-
+<!-- Membership Sign Up Form -->
+<form action="http://courses.cs.usna.edu/SY306/tools/FormChecker/submit.cgi" method="POST">
+	First Name:
+	<input type="text" name="firstname" required><br>
+	Last Name:
+	<input type="text" name="lastname"><br>
+	Gender:
+	<input type="radio" name="gender"><br>
+	Email:
+	<input type="text" name="email"><br>
+	Create Password:
+	<input type="password" name="pass"><br>
+	What do you do outdoors?
+	<input type="textarea" name="hobbies"><br>
+	<input type="hidden" id="reason" name="reason" value="Membership">
+	<input type="reset" value="reset">
+	<input type="submit" value="Submit"><br>
+	
+	
+</form>
 <!-- start footer section of page with contact info -->
 		<footer style=text-align:center;>
 			<p> Contact Us: <a href="mailto:m213126@usna.edu?subject=SY306_Website">m213126@usna.edu</a></p>
