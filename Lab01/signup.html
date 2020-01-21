@@ -22,7 +22,7 @@
 <!-- Start main body of website -->
 
 <!-- Membership Sign Up Form -->
-<form action="http://courses.cs.usna.edu/SY306/tools/FormChecker/submit.cgi" method="POST">
+<form action="http://courses.cs.usna.edu/SY306/tools/FormChecker/submit.cgi" method="POST" id="membershipForm">
 	First Name:
 	<input type="text" name="firstname" required><br>
 	Last Name:
@@ -39,7 +39,7 @@
 	<input type="submit" value="Submit"><br>
 	</form>
 	Comments:<br>
-	<textarea rows="5" cols="55" name="comments">
+	<textarea rows="5" cols="55" name="comments" form="membershipForm">
 		Enter Comments Here...</textarea>
 	
 	
