@@ -1,4 +1,4 @@
-title {
+h1 {
 	color: #8c8c8c;
 	text-decoration: underline;
 }
@@ -7,7 +7,7 @@ body {
 }
 
 nav {
-	border-style: groove;
+	border-bottom-style: groove;
 	border-color: #C0C0C0;
 	margin-bottom: 50px;
 }
