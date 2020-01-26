@@ -1,5 +1,5 @@
 h1 {
-	color: #8c8c8c;
+	color: #262626;
 	text-decoration: underline;
 }
 body {
@@ -10,4 +10,9 @@ nav {
 	border-bottom-style: groove;
 	border-color: #C0C0C0;
 	margin-bottom: 50px;
+}
+
+form {
+	border-style: groove;
+	border-color: #C0C0C0;
 }
