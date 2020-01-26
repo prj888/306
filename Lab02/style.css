@@ -16,3 +16,9 @@ div {
 	border-style: groove;
 	border-color: #C0C0C0;
 }
+
+#table {
+	border-style: groove;
+	border-color: #C0C0C0;
+	padding: 5px
+}
