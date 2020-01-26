@@ -1,3 +1,13 @@
+head {
+	color: #8c8c8c;
+}
 body {
-	background-color: #ffefcc;
+	background-color: #ffefcc;	
+}
+
+nav {
+	border-style: groove;
+	border-color: #C0C0C0;
+	margin-bottom: 50px;
+	text-decoration: underline;
 }
