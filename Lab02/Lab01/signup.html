@@ -1,0 +1,69 @@
+<!-- SIGN UP form -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Paul's Outdoor Recreation</title>
+		<meta charset="UTF-8">
+	</head>
+	<body >
+<!-- Page Header -->
+<img src="Mountain_Range.jpg" style="width:100%;" alt="Mountain Range">
+<!-- image orignal source: https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwixzoXHo4PnAhXqguAKHcUWAaoQjRx6BAgBEAQ&url=https%3A%2F%2Fen.wikivoyage.org%2Fwiki%2FMountain_ranges&psig=AOvVaw0klgKIo0zB6j7yub-vD_JE&ust=1579096766693172 -->
+<h1 style=text-align:center;> Paul's Outdoor Recreation</h1>
+
+<!-- Navigation bar -->
+	<nav style=text-align:center;>
+		<a href="index.html">Home</a> &nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="products.html">Products</a>
+	</nav>
+
+<!-- Start main body of website -->
+
+<!-- Membership Sign Up Form -->
+<form action="http://courses.cs.usna.edu/SY306/tools/FormChecker/submit.cgi" method="POST" id="membershipForm">
+	First Name:
+	<input type="text" name="firstname" required><br>
+	Last Name:
+	<input type="text" name="lastname"><br>
+	Gender:<br>
+	<input type="radio" name="gender" value="male">Male<br>
+	<input type="radio" name="gender" value="female">Female<br>
+	Email:
+	<input type="text" name="email"><br>
+	Create Password:
+	<input type="password" name="pass"><br>
+	<input type="hidden" id="reason" name="reason" value="Membership">
+	<input type="reset" value="Reset">
+	<input type="submit" value="Submit"><br>
+	</form>
+	Comments:<br>
+	<textarea rows="5" cols="55" name="comments" form="membershipForm">
+		Enter Comments Here...</textarea>
+	
+	
+
+<!-- start footer section of page with contact info -->
+		<footer style=text-align:center;>
+			<p> Contact Us: <a href="mailto:m213126@usna.edu?subject=SY306_Website">m213126@usna.edu</a></p>
+		</footer>
+
+
+
+
+
+      <!-- ***************************************************************
+         Below this point is text you should include on every SY306 page
+         *************************************************************** -->
+      <script src="http://courses.cyber.usna.edu/SY306/docs/htmlvalidate.js" ></script>
+
+      <!-- The JS link above creates a button you can click on to validate your page.
+      The background of the image will load green, yellow, or red if the HTML is valid,
+      has errors, or has warnings. It will load grey if unable to determine validation.
+      The time at which the page was last modified will also be displayed below the button -->
+
+
+
+   </body>
+</html>
