@@ -12,16 +12,7 @@ nav {
 	margin-bottom: 50px;
 }
 
-form {
-	border-top-style: groove;
-	border-left-style: groove;
-	border-right-style: groove;
-	border-color: #C0C0C0;
-}
-
-textarea {
-	border-left-style: groove;
-	border-right-style: groove;
-	border-bottom-style: groove;
+div {
+	border-style: groove;
 	border-color: #C0C0C0;
 }
