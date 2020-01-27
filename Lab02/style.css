@@ -22,3 +22,22 @@ nav {
 	border-color: #C0C0C0;
 	padding-bottom: 50px;
 }
+
+main{
+	display: grid;
+	grid-template-areas:
+	"header header header"
+	"menu article aside"
+	"footer footer footer";
+	
+	grid-template-columns: 1fr 2.5fr 1fr;
+	grid-template-rows: 1fr 2.5fr 1fr;
+	text-align: center;
+	min-height: 100vh;
+	grid-gap: .5em
+}
+header {grid-area: header;}
+article {grid-area: article;}
+menu {grid-area: menu;}
+aside {grid-area: aside;}
+footer {grid-area: footer;}
