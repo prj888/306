@@ -45,7 +45,8 @@ footer {grid-area: footer;}
 iframe{
 	position: relative;
 	left: -130px;
-	z-index: -1;
+	z-index: 1;
+	opacity: 0;
 	
 	
 }
