@@ -43,8 +43,7 @@ aside {grid-area: aside;}
 footer {grid-area: footer;}
 
 iframe{
-	position: absolute;
-	left: 0px;
-	top: 0px;
+	position: relative;
+	left: -125px;
 	z-index: 1;
 }
