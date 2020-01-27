@@ -42,7 +42,3 @@ menu {grid-area: menu;}
 aside {grid-area: aside;}
 footer {grid-area: footer;}
 
-iframe {
-	/* display:none; */
-	z-index: 1;
-}
