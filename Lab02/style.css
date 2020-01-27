@@ -43,5 +43,6 @@ aside {grid-area: aside;}
 footer {grid-area: footer;}
 
 iframe {
-	display:none;
+	/* display:none; */
+	z-index: 1;
 }
