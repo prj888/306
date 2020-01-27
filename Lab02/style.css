@@ -23,7 +23,7 @@ nav {
 	padding-bottom: 50px;
 }
 
-main{
+main {
 	display: grid;
 	grid-template-areas:
 	"header header header"
