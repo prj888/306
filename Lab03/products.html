@@ -47,47 +47,48 @@
 	//////////////////////	MY CODE	/////////////////////////////////////
 	var shopCart = [];
 	
-	function addToCart(productID){
+	function addToCart(productID){ //Function to add items to cart
 		var test = false;
 		var product1 = "Tent";
 		var product2 = "Sleeping Bag";
 		var product3 = "Camp Stove";
 		var newProduct = "";
 		
-		if (productID == 1){
+		if (productID == 1){  //determine what item was added
 			newProduct = product1;
 		} else if (productID == 2){
 			newProduct = product2;
 		} else if (productID == 3){
 			newProduct = product3;
 		}
-		test = shopCart.includes(newProduct);
-		if (test == true){
+		test = shopCart.includes(newProduct);  //determine if item is in cart already
+		if (test == true){  //already in cart
 			window.alert(newProduct + " is already in your cart!");
 			console.log("Array is:" + shopCart);
-		} else {
+		} else { //not in cart
 			shopCart.push(newProduct);
 			window.alert(newProduct + " added to your cart!");
 			console.log("Array is:" + shopCart);
 		}
 	}
 	
-	function viewCart(){
+	function viewCart(){ //display table with cart items
+		//following variables are used to create the appropriate tables
 		var table1 = '<table style="width:75%;margin-left: auto;margin-right: auto;"> <caption>Cart</caption><tr style=text-align:center;font-weight:bold;><td>'+shopCart[0]+'</td></tr></table>';
 		var table2 = '<table style="width:75%;margin-left: auto;margin-right: auto;"> <caption>Cart</caption><tr style=text-align:center;font-weight:bold;><td>'+shopCart[0]+'</td></tr><tr style=text-align:center;font-weight:bold;><td>'+shopCart[1]+'</td></tr></table>';
 		var table3 = '<table style="width:75%;margin-left: auto;margin-right: auto;"> <caption>Cart</caption><tr style=text-align:center;font-weight:bold;><td>'+shopCart[0]+'</td></tr><tr style=text-align:center;font-weight:bold;><td>'+shopCart[1]+'</td></tr><tr style=text-align:center;font-weight:bold;><td>'+shopCart[2]+'</td></tr></table>';
 		var empty = '<p style=text-align:center;font-weight:bold;>"Your cart is empty!"</p>'
-		if (shopCart.length == 0){
+		if (shopCart.length == 0){ //if cart is empty
 			document.getElementById("cartTable").innerHTML = empty;
-		} else if (shopCart.length == 1){
+		} else if (shopCart.length == 1){ //cart has 1 item
 			document.getElementById("cartTable").innerHTML = table1;
-		} else if (shopCart.length == 2){
+		} else if (shopCart.length == 2){ //cart has 2 items
 			document.getElementById("cartTable").innerHTML = table2;
-		} else if (shopCart.length == 3){
+		} else if (shopCart.length == 3){ //cart has 3 items
 			document.getElementById("cartTable").innerHTML = table3;
 		}
 	}
-	function emptyCart(){
+	function emptyCart(){ //empty the cart
 		shopCart = [];
 		document.getElementById("cartTable").innerHTML = ('<p style=text-align:center;font-weight:bold;>"Your cart has been emptied!"</p>');
 		console.log("Cart is now: "+shopCart);
