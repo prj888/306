@@ -51,12 +51,10 @@
 		
 		//determine if the minute is odd or even
 		if (minute%2 == 0){
-			my_writeln("Howdy! Welcom to Paul's Outdoor Recreation");
+			my_writeln("Howdy! Welcome to Paul's Outdoor Recreation");
 		} else{
 			my_writeln("Hey There! Thanks for stopping by Paul's Outdoor Recreation");
 		}
-		my_finish();
-		console.log("Hello, is this working?");
 
 
 
@@ -72,7 +70,16 @@
 <h1 style=text-align:center;> Paul's Outdoor Recreation</h1>
 <p id="demo"></p>
 <script>
-document.getElementById("demo").innerHTML = my_writeln("Hello World");
+// Note - using my_writeln instead of document.writeln()
+var now = new Date(); //Get current time
+minute = now.getMinutes(); //Get the current minutes
+
+//determine if the minute is odd or even
+if (minute%2 == 0){
+	my_writeln("Howdy! Welcome to Paul's Outdoor Recreation");
+} else{
+	my_writeln("Hey There! Thanks for stopping by Paul's Outdoor Recreation");
+}
 </script>
 <img src="like.png" alt="Facebook Like Button" style="width:125px; height:53px; text-align:right;">
 <iframe src="https://www.youtube.com/embed/oHg5SJYRHA0" style="height:53px;width:126px;"></iframe>
