@@ -71,6 +71,17 @@
 			console.log("Array is:" + shopCart);
 		}
 	}
+	
+	function viewCart(){
+		if (shopCart.length == 0){
+			
+		}
+	
+	function emptyCart(){
+		shopCart = [];
+		window.alert("Your cart has been emptied!");
+	}
+	}
    </script>
    
 	</head>
@@ -82,7 +93,9 @@
 <!-- Navigation Bar -->
 <nav style=text-align:center;>
 	<a href="index.html">Home</a> &nbsp;&nbsp;&nbsp;&nbsp;
-	<a href="signup.html">Membership Sign Up</a>
+	<a href="signup.html">Membership Sign Up</a> &nbsp;&nbsp;&nbsp;&nbsp;
+	<button onclick="viewCart()">View Cart</button>&nbsp;&nbsp;&nbsp;&nbsp;
+	<button onclick="emptyCart()">Empty Cart</button>
 </nav>
 
 <!-- Products Table -->
