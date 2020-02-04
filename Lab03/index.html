@@ -54,12 +54,14 @@
 // Note - using my_writeln instead of document.writeln()
 var now = new Date(); //Get current time
 minute = now.getMinutes(); //Get the current minutes
+var oddText = "Howdy! Welcome to Paul's Outdoor Recreation";
+var evenText = "Hey There! Thanks for stopping by Paul's Outdoor Recreation";
 
 //determine if the minute is odd or even
 if (minute%2 == 0){
-	document.getElementById("demo").innerHTML = my_writeln("Howdy! Welcome to Paul's Outdoor Recreation");
+	my_writeln(evenText);
 } else{
-	document.getElementById("demo").innerHTML = my_writeln("Hey There! Thanks for stopping by Paul's Outdoor Recreation");
+	my_writeln(oddText);
 }
 </script>
 <br>
