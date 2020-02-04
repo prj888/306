@@ -6,6 +6,54 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="style.css">
 		
+		<script>
+     <!--
+    // **************************************************************************
+     // BELOW IS JAVASCRIPT YOU SHOULD PROBABLY LEAVE ALONE
+	 // YOU MAY FIND THESE USEFUL FOR DEBUGGING BUT YOU CERTAINLY DON'T HAVE TO USE THEM
+  // **************************************************************************
+
+	// Debug helper functions
+
+     // Use my_writeln() instead of document.writeln().
+     // Then when script is finished, call my_finish() to output
+     // the contents of all my_writeln() calls to a visible text area box.
+     var _alldata = "";
+
+     // Call this function everytime instead of document.writeln()
+     // It will call document.writeln() for you, but will also save contents for friendly output later.
+     // It is helpful to add \n at the end of strings that logically form a line, to make the output easier to read later.
+     function my_writeln(str) {
+		// Output to the document
+         document.writeln(str);
+
+         // Save for later
+         str += "\n";
+         _alldata += str;
+     }
+
+     // Call this function when finish using JavaScript to see all of the JS output.
+     // This only works if you have called my_writeln() everytime instead of document.writeln().
+     function my_finish() {
+         document.writeln("<form><textarea cols=\"120\" rows=\"20\">"+_alldata+"</textarea></form>");
+	}
+
+     // ************************************************************
+     // START YOUR JAVASCRIPT HERE.  A SIMPLE EXAMPLE IS GIVEN BELOW - DELETE/COMMENT IT BEFORE YOU START
+     // ************************************************************
+     // This code creates N dummy links
+     var numLinks = window.prompt("How many links would you like?");
+
+     for (ii = 0; ii < numLinks ; ii++) {
+       // Note - using my_writeln instead of document.writeln()
+       my_writeln("<a href=\"nowhere.html\" >");   // Start a dummy link.
+       my_writeln(" Link"+ii);                   // text to show for the link.
+       my_writeln(" </a> <br/>");
+     }
+
+     // Finished with JavaScript.  Output the debug results.
+     my_finish();
+   </script>
 	
 	</head>
 	<body >
