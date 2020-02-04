@@ -86,10 +86,10 @@
 		} else if (shopCart.length == 3){
 			document.getElementById("cartTable").innerHTML = table3;
 		}
-	
+	}
 	function emptyCart(){
 		shopCart = [];
-		window.alert("Your cart has been emptied!");
+		document.getElementById("cartTable").innerHTML = ('<p style=text-align:center;font-weight:bold;>"Your cart has been emptied!"</p>');
 	}
 	}
    </script>
