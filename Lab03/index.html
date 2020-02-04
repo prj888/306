@@ -6,6 +6,53 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="style.css">
 		
+		<script>
+		<!--
+		// **************************************************************************
+		// BELOW IS JAVASCRIPT YOU SHOULD PROBABLY LEAVE ALONE
+		// YOU MAY FIND THESE USEFUL FOR DEBUGGING BUT YOU CERTAINLY DON'T HAVE TO USE THEM
+		// **************************************************************************
+
+		// Debug helper functions
+
+		// Use my_writeln() instead of document.writeln().
+		// Then when script is finished, call my_finish() to output
+		// the contents of all my_writeln() calls to a visible text area box.
+		var _alldata = "";
+
+		// Call this function everytime instead of document.writeln()
+		// It will call document.writeln() for you, but will also save contents for friendly output later.
+		// It is helpful to add \n at the end of strings that logically form a line, to make the output easier to read later.
+		function my_writeln(str) {
+		// Output to the document
+		 document.writeln(str);
+
+		 // Save for later
+		 str += "\n";
+		 _alldata += str;
+		}
+
+		// Call this function when finish using JavaScript to see all of the JS output.
+		// This only works if you have called my_writeln() everytime instead of document.writeln().
+		function my_finish() {
+		 document.writeln("<form><textarea cols=\"120\" rows=\"20\">"+_alldata+"</textarea></form>");
+		}
+
+		// ************************************************************
+		// START YOUR JAVASCRIPT HERE.  A SIMPLE EXAMPLE IS GIVEN BELOW - DELETE/COMMENT IT BEFORE YOU START
+		// ************************************************************
+		// This code creates N dummy links
+
+
+
+		// Note - using my_writeln instead of document.writeln()
+		my_writeln("Hello World");   // Start a dummy link.
+
+
+
+		// Finished with JavaScript.  Output the debug results.
+		my_finish();
+		</script>
 	
 	</head>
 	<body >
@@ -14,51 +61,7 @@
 <!-- image orignal source: https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwixzoXHo4PnAhXqguAKHcUWAaoQjRx6BAgBEAQ&url=https%3A%2F%2Fen.wikivoyage.org%2Fwiki%2FMountain_ranges&psig=AOvVaw0klgKIo0zB6j7yub-vD_JE&ust=1579096766693172 -->
 <h1 style=text-align:center;> Paul's Outdoor Recreation</h1>
 <script>
-<!--
-// **************************************************************************
-// BELOW IS JAVASCRIPT YOU SHOULD PROBABLY LEAVE ALONE
-// YOU MAY FIND THESE USEFUL FOR DEBUGGING BUT YOU CERTAINLY DON'T HAVE TO USE THEM
-// **************************************************************************
-
-// Debug helper functions
-
-// Use my_writeln() instead of document.writeln().
-// Then when script is finished, call my_finish() to output
-// the contents of all my_writeln() calls to a visible text area box.
-var _alldata = "";
-
-// Call this function everytime instead of document.writeln()
-// It will call document.writeln() for you, but will also save contents for friendly output later.
-// It is helpful to add \n at the end of strings that logically form a line, to make the output easier to read later.
-function my_writeln(str) {
-// Output to the document
- document.writeln(str);
-
- // Save for later
- str += "\n";
- _alldata += str;
-}
-
-// Call this function when finish using JavaScript to see all of the JS output.
-// This only works if you have called my_writeln() everytime instead of document.writeln().
-function my_finish() {
- document.writeln("<form><textarea cols=\"120\" rows=\"20\">"+_alldata+"</textarea></form>");
-}
-
-// ************************************************************
-// START YOUR JAVASCRIPT HERE.  A SIMPLE EXAMPLE IS GIVEN BELOW - DELETE/COMMENT IT BEFORE YOU START
-// ************************************************************
-// This code creates N dummy links
-
-
-
-// Note - using my_writeln instead of document.writeln()
-my_writeln("Hello World");   // Start a dummy link.
-
-
-
-// Finished with JavaScript.  Output the debug results.
-my_finish();
+my_writeln("Hello World");
 </script>
 <img src="like.png" alt="Facebook Like Button" style="width:125px; height:53px; text-align:right;">
 <iframe src="https://www.youtube.com/embed/oHg5SJYRHA0" style="height:53px;width:126px;"></iframe>
