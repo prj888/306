@@ -76,7 +76,7 @@
 		var table1 = '<table style="width:75%;margin-left: auto;margin-right: auto;"> <caption>Cart</caption><tr style=text-align:center;font-weight:bold;><td>'+shopCart[0]+'</td></tr></table>';
 		var table2 = '<table style="width:75%;margin-left: auto;margin-right: auto;"> <caption>Cart</caption><tr style=text-align:center;font-weight:bold;><td>'+shopCart[0]+'</td></tr><tr style=text-align:center;font-weight:bold;><td>'+shopCart[1]+'</td></tr></table>';
 		var table3 = '<table style="width:75%;margin-left: auto;margin-right: auto;"> <caption>Cart</caption><tr style=text-align:center;font-weight:bold;><td>'+shopCart[0]+'</td></tr><tr style=text-align:center;font-weight:bold;><td>'+shopCart[1]+'</td></tr><tr style=text-align:center;font-weight:bold;><td>'+shopCart[2]+'</td></tr></table>';
-		var empty = '<style=text-align:center;font-weight:bold;>"Your cart is empty!"</style>'
+		var empty = '<p style=text-align:center;font-weight:bold;>"Your cart is empty!"</p>'
 		if (shopCart.length == 0){
 			document.getElementById("cartTable").innerHTML = empty;
 		} else if (shopCart.length == 1){
