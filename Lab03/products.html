@@ -47,8 +47,27 @@
 	//////////////////////	MY CODE	/////////////////////////////////////
 	var shopCart = [];
 	
-	function addToCart(product){
+	function addToCart(productID){
+		var test = false;
+		var product1 = "Tent";
+		var product2 = "Sleeping Bag";
+		var product3 = "Camp Stove";
+		var newProduct = "";
 		
+		if (productID == 1){
+			newProduct = product1;
+		} else if (productID == 2){
+			newProduct = product2;
+		} else if (productID == 3){
+			newProduct = product3;
+		}
+		test = shopCart.includes(newProduct);
+		if (test == true){
+			window.alert(newProduct + " is already in your cart!");
+		} else {
+			shopCart.push(newProduct);
+			window.alert(newProduct + " added to your cart!");
+		}
 		window.alert("Added" +product +  "to Cart!");
 	}
    </script>
