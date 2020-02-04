@@ -49,7 +49,7 @@
 <img src="Mountain_Range.jpg" style="width:100%; z-index:-1;" alt="Mountain Range">
 <!-- image orignal source: https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwixzoXHo4PnAhXqguAKHcUWAaoQjRx6BAgBEAQ&url=https%3A%2F%2Fen.wikivoyage.org%2Fwiki%2FMountain_ranges&psig=AOvVaw0klgKIo0zB6j7yub-vD_JE&ust=1579096766693172 -->
 <h1 style=text-align:center;> Paul's Outdoor Recreation</h1>
-<p id="demo"></p>
+<p id="demo">
 <script>
 // Note - using my_writeln instead of document.writeln()
 var now = new Date(); //Get current time
@@ -63,8 +63,12 @@ if (minute%2 == 0){
 } else{
 	my_writeln(oddText);
 }
+
+document.getElementById("demo").style.fontSize = "larger";
+document.getElementById("demo").style.fontWeight = "bold";
 </script>
-<br>
+</p>
+<br><br>
 <img src="like.png" alt="Facebook Like Button" style="width:125px; height:53px; text-align:right;">
 <iframe src="https://www.youtube.com/embed/oHg5SJYRHA0" style="height:53px;width:126px;"></iframe>
  
