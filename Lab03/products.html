@@ -64,9 +64,11 @@
 		test = shopCart.includes(newProduct);
 		if (test == true){
 			window.alert(newProduct + " is already in your cart!");
+			console.log("Array is:" + shopCart);
 		} else {
 			shopCart.push(newProduct);
 			window.alert(newProduct + " added to your cart!");
+			console.log("Array is:" + shopCart);
 		}
 		window.alert("Added" +product +  "to Cart!");
 	}
