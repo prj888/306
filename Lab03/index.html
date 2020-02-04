@@ -46,7 +46,16 @@
 
 
 		// Note - using my_writeln instead of document.writeln()
-		my_writeln("Hello World");   // Start a dummy link.
+		var now = new Date(); //Get current time
+		minute = now.getMinutes(); //Get the current minutes
+		
+		//determine if the minute is odd or even
+		if (minute%2 == 0){
+			my_writeln("Howdy! Welcom to Paul's Outdoor Recreation")
+		} else{
+			my_writeln("Hey There! Thanks for stopping by Paul's Outdoor Recreation")
+		}
+		
 
 
 
