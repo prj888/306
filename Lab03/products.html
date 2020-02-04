@@ -47,6 +47,9 @@
 	//////////////////////	MY CODE	/////////////////////////////////////
 	var shopCart = [];
 	
+	function addToCart(){
+		window.alert("Added to Cart!");
+	}
    </script>
    
 	</head>
@@ -71,7 +74,7 @@
 		<th>Product</th>
 		<th>Description</th>
 		<th>Price</th>
-		<th>Add to Cart?</th>
+		<th>Buy?</th>
 	</tr>
 	<tr style=text-align:center;>
 		<th rowspan="4">Camping</th>
@@ -80,19 +83,19 @@
 		<td><a href="detail.html">Tent</a></td>
 		<td>The base level tent is designed to fit 2 people with gear or 4 people and no gear. Ideally used for car camping uses.</td>
 		<td>$45</td>
-		<td>ADD</td>
+		<td><button onclick="addToCart()">Add to Cart</button></td>
 	</tr>
 	<tr style=text-align:center;>
 		<td>Sleeping Bag</td>
 		<td>This basic mummy sleeping bag is a 55 degree bag meant for 3 season camping. Perfect for short trips, not ideal for backpacking.</td>
 		<td>$80</td>
-		<td>ADD</td>
+		<td><button onclick="addToCart()">Add to Cart</button></td>
 	</tr>
 	<tr style=text-align:center;>
 		<td>Camp Stove</td>
 		<td>This basic camp stove is propane fueled and features 2 full size burners. Perfect for a family campsite.</td>
 		<td>$44</td>
-		<td>ADD</td>
+		<td><button onclick="addToCart()">Add to Cart</button></td>
 	</tr>
 </table>
 </div>
