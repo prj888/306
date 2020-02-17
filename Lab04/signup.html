@@ -7,6 +7,12 @@
 		<title>Paul's Outdoor Recreation</title>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="style.css">
+		
+		<script>
+			function passwordCheck(){
+				
+			}
+		</script>
 	</head>
 	<body >
 <!-- Page Header -->
@@ -33,7 +39,7 @@
 	<input type="radio" name="gender" value="male">Male<br>
 	<input type="radio" name="gender" value="female">Female<br>
 	Email:
-	<input type="email" name="email"><br>
+	<input type="email" name="email" onchange="passwordCheck(this.value)"><br>
 	Create Password:
 	<input type="password" name="pass"><br>
 	<input type="hidden" id="reason" name="reason" value="Membership">
