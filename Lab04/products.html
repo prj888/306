@@ -1,0 +1,174 @@
+<!-- PRODUCTS PAGE -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Paul's Outdoor Recreation</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<style>
+		table, th, td {
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+		</style>
+		
+		<script>
+     <!--
+    // **************************************************************************
+     // BELOW IS JAVASCRIPT YOU SHOULD PROBABLY LEAVE ALONE
+	 // YOU MAY FIND THESE USEFUL FOR DEBUGGING BUT YOU CERTAINLY DON'T HAVE TO USE THEM
+  // **************************************************************************
+
+	// Debug helper functions
+
+     // Use my_writeln() instead of document.writeln().
+     // Then when script is finished, call my_finish() to output
+     // the contents of all my_writeln() calls to a visible text area box.
+     var _alldata = "";
+
+     // Call this function everytime instead of document.writeln()
+     // It will call document.writeln() for you, but will also save contents for friendly output later.
+     // It is helpful to add \n at the end of strings that logically form a line, to make the output easier to read later.
+     function my_writeln(str) {
+		// Output to the document
+         document.writeln(str);
+
+         // Save for later
+         str += "\n";
+         _alldata += str;
+     }
+
+     // Call this function when finish using JavaScript to see all of the JS output.
+     // This only works if you have called my_writeln() everytime instead of document.writeln().
+     function my_finish() {
+         document.writeln("<form><textarea cols=\"120\" rows=\"20\">"+_alldata+"</textarea></form>");
+	}
+	
+	//////////////////////	MY CODE	/////////////////////////////////////
+	var shopCart = [];
+	
+	function addToCart(productID){ //Function to add items to cart
+		var test = false;
+		var product1 = "Tent";
+		var product2 = "Sleeping Bag";
+		var product3 = "Camp Stove";
+		var newProduct = "";
+		
+		if (productID == 1){  //determine what item was added
+			newProduct = product1;
+		} else if (productID == 2){
+			newProduct = product2;
+		} else if (productID == 3){
+			newProduct = product3;
+		}
+		test = shopCart.includes(newProduct);  //determine if item is in cart already
+		if (test == true){  //already in cart
+			window.alert(newProduct + " is already in your cart!");
+			console.log("Array is:" + shopCart);
+		} else { //not in cart
+			shopCart.push(newProduct);
+			window.alert(newProduct + " added to your cart!");
+			console.log("Array is:" + shopCart);
+		}
+	}
+	
+	function viewCart(){ //display table with cart items
+		//following variables are used to create the appropriate tables
+		var table1 = '<table style="width:75%;margin-left: auto;margin-right: auto;"> <caption>Cart</caption><tr style=text-align:center;font-weight:bold;><td>'+shopCart[0]+'</td></tr></table>';
+		var table2 = '<table style="width:75%;margin-left: auto;margin-right: auto;"> <caption>Cart</caption><tr style=text-align:center;font-weight:bold;><td>'+shopCart[0]+'</td></tr><tr style=text-align:center;font-weight:bold;><td>'+shopCart[1]+'</td></tr></table>';
+		var table3 = '<table style="width:75%;margin-left: auto;margin-right: auto;"> <caption>Cart</caption><tr style=text-align:center;font-weight:bold;><td>'+shopCart[0]+'</td></tr><tr style=text-align:center;font-weight:bold;><td>'+shopCart[1]+'</td></tr><tr style=text-align:center;font-weight:bold;><td>'+shopCart[2]+'</td></tr></table>';
+		var empty = '<p style=text-align:center;font-weight:bold;>"Your cart is empty!"</p>'
+		if (shopCart.length == 0){ //if cart is empty
+			document.getElementById("cartTable").innerHTML = empty;
+		} else if (shopCart.length == 1){ //cart has 1 item
+			document.getElementById("cartTable").innerHTML = table1;
+		} else if (shopCart.length == 2){ //cart has 2 items
+			document.getElementById("cartTable").innerHTML = table2;
+		} else if (shopCart.length == 3){ //cart has 3 items
+			document.getElementById("cartTable").innerHTML = table3;
+		}
+	}
+	function emptyCart(){ //empty the cart
+		shopCart = [];
+		document.getElementById("cartTable").innerHTML = ('<p style=text-align:center;font-weight:bold;>"Your cart has been emptied!"</p>');
+		console.log("Cart is now: "+shopCart);
+	}
+	
+   </script>
+   
+	</head>
+	<body >
+<!-- Page Header -->
+<img src="Mountain_Range.jpg" style="width:100%;" alt="Mountain Range">
+<!-- image orignal source: https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwixzoXHo4PnAhXqguAKHcUWAaoQjRx6BAgBEAQ&url=https%3A%2F%2Fen.wikivoyage.org%2Fwiki%2FMountain_ranges&psig=AOvVaw0klgKIo0zB6j7yub-vD_JE&ust=1579096766693172 -->
+<h1 style=text-align:center;> Paul's Outdoor Recreation</h1>
+<!-- Navigation Bar -->
+<nav style=text-align:center;>
+	<a href="index.html">Home</a> &nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="signup.html">Membership Sign Up</a> &nbsp;&nbsp;&nbsp;&nbsp;
+	<button onclick="viewCart()">View Cart</button>&nbsp;&nbsp;&nbsp;&nbsp;
+	<button onclick="emptyCart()">Empty Cart</button>
+</nav>
+
+<div id="cartTable">
+<!-- The cart table will appear here -->
+</div>
+
+<!-- Products Table -->
+<div id="table">
+<br>
+<table style="width:75%;margin-left: auto;margin-right: auto;">
+	<caption>Products</caption>
+	<tr style=text-align:center;>
+		<th>Category</th>
+		<th>Product</th>
+		<th>Description</th>
+		<th>Price</th>
+		<th>Buy?</th>
+	</tr>
+	<tr style=text-align:center;>
+		<th rowspan="4">Camping</th>
+	</tr>
+	<tr style=text-align:center;>
+		<td><a href="detail.html">Tent</a></td>
+		<td>The base level tent is designed to fit 2 people with gear or 4 people and no gear. Ideally used for car camping uses.</td>
+		<td>$45</td>
+		<td><button onclick="addToCart('1')">Add to Cart</button></td>
+	</tr>
+	<tr style=text-align:center;>
+		<td>Sleeping Bag</td>
+		<td>This basic mummy sleeping bag is a 55 degree bag meant for 3 season camping. Perfect for short trips, not ideal for backpacking.</td>
+		<td>$80</td>
+		<td><button onclick="addToCart('2')">Add to Cart</button></td>
+	</tr>
+	<tr style=text-align:center;>
+		<td>Camp Stove</td>
+		<td>This basic camp stove is propane fueled and features 2 full size burners. Perfect for a family campsite.</td>
+		<td>$44</td>
+		<td><button onclick="addToCart('3')">Add to Cart</button></td>
+	</tr>
+</table>
+</div>
+<!-- start footer section of page with contact info -->
+		<footer style=text-align:center;>
+			<p> Contact Us: <a href="mailto:m213126@usna.edu?subject=SY306_Website">m213126@usna.edu</a></p>
+		</footer>
+
+
+
+
+
+      <!-- ***************************************************************
+         Below this point is text you should include on every SY306 page
+         *************************************************************** -->
+      <script src="http://courses.cyber.usna.edu/SY306/docs/htmlvalidate.js" ></script>
+
+      <!-- The JS link above creates a button you can click on to validate your page.
+      The background of the image will load green, yellow, or red if the HTML is valid,
+      has errors, or has warnings. It will load grey if unable to determine validation.
+      The time at which the page was last modified will also be displayed below the button -->
+
+
+
+   </body>
+</html>
