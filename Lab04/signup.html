@@ -14,7 +14,7 @@
 				var regLengthPattern = RegExp(/\b\S{6}/)
 				var lenTest = regLengthPattern.test(passIn)
 				if (lenTest == false){
-					alert("fail")
+					document.getElementById("password").innerHTML = "Password must be at least 6 characters!";
 				}
 				
 			}
@@ -55,15 +55,24 @@
 <form action="http://courses.cs.usna.edu/SY306/tools/FormChecker/submit.cgi" method="POST" id="membershipForm" onsubmit="formValidate()">
 	First Name:
 	<input type="text" name="firstname" required onchange="firstCheck(this.value)"><br>
+	<div id="firstName">
+	</div>
+
 	Last Name:
-	<input type="text" name="lastname"><br>
+	<input type="text" name="lastname">
+	<br>
 	Gender:<br>
 	<input type="radio" name="gender" value="male">Male<br>
 	<input type="radio" name="gender" value="female">Female<br>
 	Email:
-	<input type="email" name="email" onchange="emailInCheck(this.value)"><br>
+	<input type="email" name="email" onchange="emailInCheck(this.value)">
+	<div id="email">
+	</div>
+	<br>
 	Create Password:
 	<input type="password" name="pass" onchange="passwordCheck(this.value)"><br>
+	<div id="password">
+	</div>
 	<input type="hidden" id="reason" name="reason" value="Membership">
 	<input type="reset" value="Reset">
 	<input type="submit" value="Submit" onclick="submitCheck()"><br>
@@ -71,6 +80,8 @@
 	Comments:<br>
 	<textarea rows="5" cols="55" name="comments" form="membershipForm" onchange="textareaCheck(this.value)">
 		Enter Comments Here...</textarea>
+	<div id="textarea">
+	</div>
 </div>
 	
 
