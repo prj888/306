@@ -84,9 +84,8 @@
 			function submitCheck() {
 				fistCheckTest = firstCheck(document.getElementById("firstname").value)
 				console.log(firstCheckTest)
-				if (firstCheckTest == false){
-					event.preventDefault()
-					returnToPreviousPage()
+				
+				return false;
 				}
 			}
 		</script>
@@ -107,7 +106,7 @@
 
 <!-- Membership Sign Up Form -->
 <div id="signup">
-<form action="http://courses.cs.usna.edu/SY306/tools/FormChecker/submit.cgi" method="POST" id="membershipForm" onsubmit="formValidate()">
+<form action="http://courses.cs.usna.edu/SY306/tools/FormChecker/submit.cgi" method="POST" id="membershipForm" onsubmit="return submitCheck()">
 	First Name:
 	<input type="text" name="firstname" required onchange="firstCheck(this.value)">
 	<span id="firstName">
