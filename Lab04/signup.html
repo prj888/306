@@ -37,7 +37,7 @@
 				console.log(emailIn)
 				var emailFail = "Improper Email Format!"
 				
-				var regEmailPattern = RegExp(/\w+\@\w+\.\w+/)
+				var regEmailPattern = RegExp(/\w+\@\D+\.\w+/)
 				var emailTest = regEmailPattern.test(emailIn)
 				
 				
@@ -50,7 +50,19 @@
 			}
 			
 			function firstCheck(firstIn){
+				console.log(firstIn)
+				var firstFail = "Missing First Name!"
 				
+				var regFirstPattern = RegExp(/\D+/)
+				var firstTest = regFirstPattern.test(firstIn)
+				
+				
+				if (firstTest == false){
+					document.getElementById("first").innerHTML = firstFail
+					
+				}else{
+					document.getElementById("first").innerHTML = "Pass!"
+				}
 			}
 			
 			function textareaCheck(textIn){
