@@ -34,7 +34,19 @@
 			}
 			
 			function emailCheck(emailIn){
+				console.log(emailIn)
+				var emailFail = "Improper Email Format!"
 				
+				var regemailPattern = RegExp(/\w+\@\w+\.\w+/)
+				var emailTest = regLengthPattern.test(emailIn)
+				
+				
+				if (emailTest == false){
+					document.getElementById("email").innerHTML = emailFail
+					
+				}else{
+					document.getElementById("email").innerHTML = "Pass!"
+				}
 			}
 			
 			function firstCheck(firstIn){
