@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 
-import cgi, cgitb
-cgitb.enable()
+import cgi
+import cgitb; cgitb.enable()
 
-input_data = cgi.FieldStorage()
+form = cgi.FieldStorage()
 
 print ("Content-Type: text/html")
 print ()
@@ -18,17 +18,30 @@ print ('''\
 ''')
 
 def main():
-	numOne = form.getvalue("numOne")
-	numTwo = form.getvalue("numTwo")
-
+	error = "ERROR: Invalid entry - entry should be in the format numTest.py?numOne=10&numTwo=20"
 	try:
-		outOne = int(numOne)
-		outTwo = int(numTwo)
+		One = int(form.getvalue("numOne"))
+		Two = int(form.getvalue("numTwo"))
 	except:
-		print("One of the variables is not a number!")
+		print(error)
+		return False
 
-	if (numOne or numTwo) == 0:
-		print("One of the variables is 0!")
+	if (One == 0) or (Two == 0):
+		print(error)
 
-	if (numOne or numTwo) == "":
-		print("One of the variables is blank!")
+	if (One or Two) == "":
+		print(error)
+		return False
+
+	result = One/Two
+	out = "{0:d}/{1:d} = {2:.1f}"
+	print(out.format(One,Two,result))
+
+
+
+main()
+
+print ('''\
+</body>
+</html>
+''')
