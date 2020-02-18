@@ -23,13 +23,17 @@
 				
 				if (lenTest == false & digitTest == false){
 					document.getElementById("password").innerHTML = bothFail
+					return false
 					
 				}else if (lenTest == false){
 					document.getElementById("password").innerHTML = lenFail
+					return false
 				}else if (digitTest == false){
 					document.getElementById("password").innerHTML = digitFail
+					return false
 				}else{
 					document.getElementById("password").innerHTML = "Pass!"
+					return true
 				}
 			}
 			
@@ -43,9 +47,11 @@
 				
 				if (emailTest == false){
 					document.getElementById("email").innerHTML = emailFail
+					return false
 					
 				}else{
 					document.getElementById("email").innerHTML = "Pass!"
+					return true
 				}
 			}
 			
@@ -59,9 +65,15 @@
 				
 				if (firstTest == false){
 					document.getElementById("firstName").innerHTML = firstFail
+					return false
 					
-				}else{
+				}else if (document.getElementById("firstname").value == ""){
+					document.getElementById("firstName").innerHTML = firstFail
+					return false
+				}
+				else{
 					document.getElementById("firstName").innerHTML = "Pass!"
+					return true
 				}
 			}
 			
