@@ -10,6 +10,7 @@
 		
 		<script>
 			function passwordCheck(passIn){
+				console.log(passIn)
 				var regLengthPattern = /\b\S{6}/
 				passIn.test(regLengthPattern)
 				if (passIn.test(regLengthPattern) == false){
