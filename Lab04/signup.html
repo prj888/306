@@ -84,8 +84,11 @@
 			function submitCheck() {
 				var firstCheckTest = firstCheck(document.membershipForm.firstname.value)
 				console.log(firstCheckTest)
-				
-				return false;
+				if (firstCheckTest == false){
+					return false;
+				}else{
+				return true;
+			}
 				}
 			
 		</script>
