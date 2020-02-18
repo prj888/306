@@ -10,6 +10,8 @@
 		
 		<script>
 			function passwordCheck(passIn){
+				var regLengthPattern = /\b\S{6}/
+				passIn.test(regLengthPattern)
 				
 			}
 			
@@ -22,6 +24,10 @@
 			}
 			
 			function textareaCheck(textIn){
+				
+			}
+			
+			function submitCheck() {
 				
 			}
 		</script>
@@ -42,7 +48,7 @@
 
 <!-- Membership Sign Up Form -->
 <div id="signup">
-<form action="http://courses.cs.usna.edu/SY306/tools/FormChecker/submit.cgi" method="POST" id="membershipForm">
+<form action="http://courses.cs.usna.edu/SY306/tools/FormChecker/submit.cgi" method="POST" id="membershipForm" onsubmit="formValidate()">
 	First Name:
 	<input type="text" name="firstname" required onchange="firstCheck(this.value)"><br>
 	Last Name:
@@ -56,7 +62,7 @@
 	<input type="password" name="pass" onchange="passwordCheck(this.value)"><br>
 	<input type="hidden" id="reason" name="reason" value="Membership">
 	<input type="reset" value="Reset">
-	<input type="submit" value="Submit"><br>
+	<input type="submit" value="Submit" onclick="submitCheck()"><br>
 	</form>
 	Comments:<br>
 	<textarea rows="5" cols="55" name="comments" form="membershipForm" onchange="textareaCheck(this.value)">
