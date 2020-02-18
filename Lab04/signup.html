@@ -80,7 +80,7 @@
 			function textareaCheck(textIn){
 				console.log(textIn)
 				var input = textIn
-				var out = input.replace(/\</, "&lt")
+				var out = input.replace(/\<+/, "&lt")
 				console.log(out)
 				document.membershipForm.comments.value = out
 				
