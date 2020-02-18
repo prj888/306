@@ -21,7 +21,7 @@
 				var regNumberPattern = RegExp(/\d+/)
 				var digitTest = regNumberPattern.test(passIn)
 				
-				if (lenTest == false & digitTest){
+				if (lenTest == false & digitTest == false){
 					document.getElementById("password").innerHTML = bothFail
 					
 				}else if (lenTest == false){
