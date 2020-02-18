@@ -55,8 +55,8 @@
 <form action="http://courses.cs.usna.edu/SY306/tools/FormChecker/submit.cgi" method="POST" id="membershipForm" onsubmit="formValidate()">
 	First Name:
 	<input type="text" name="firstname" required onchange="firstCheck(this.value)">
-	<div id="firstName">
-	</div><br>
+	<span id="firstName">
+	</span><br>
 
 	Last Name:
 	<input type="text" name="lastname">
@@ -66,13 +66,13 @@
 	<input type="radio" name="gender" value="female">Female<br>
 	Email:
 	<input type="email" name="email" onchange="emailInCheck(this.value)">
-	<div id="email">
-	</div>
+	<span id="email">
+	</span>
 	<br>
 	Create Password:
 	<input type="password" name="pass" onchange="passwordCheck(this.value)">
-	<div id="password">
-	</div><br>
+	<span id="password">
+	</span><br>
 	<input type="hidden" id="reason" name="reason" value="Membership">
 	<input type="reset" value="Reset">
 	<input type="submit" value="Submit" onclick="submitCheck()"><br>
@@ -80,8 +80,8 @@
 	Comments:<br>
 	<textarea rows="5" cols="55" name="comments" form="membershipForm" onchange="textareaCheck(this.value)">
 		Enter Comments Here...</textarea>
-	<div id="textarea">
-	</div>
+	<span id="textarea">
+	</span>
 </div>
 	
 
