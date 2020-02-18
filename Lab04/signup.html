@@ -11,12 +11,26 @@
 		<script>
 			function passwordCheck(passIn){
 				console.log(passIn)
+				var digitFail = "Password must contain at least 1 digit"
+				var lenFail = "Password must be at least 6 characters!"
+				var bothFail = "Password must contain at least 1 digit and be at least 6 characters long!"
+				
 				var regLengthPattern = RegExp(/\b\S{6}/)
 				var lenTest = regLengthPattern.test(passIn)
-				if (lenTest == false){
-					document.getElementById("password").innerHTML = "Password must be at least 6 characters!";
-				}
 				
+				var regNumberPattern = RegExp(/\d+/)
+				var digitTest = regNumberPattern.test(passIn)
+				
+				if (lenTest == false & digitTest){
+					document.getElementById("password").innerHTML = bothFail
+					
+				}else if (lenTest == false){
+					document.getElementById("password").innerHTML = lenFail
+				}else if (digitTest == false){
+					document.getElementById("password").innerHTML = digitFail
+				}else{
+					document.getElementById("password").innerHTML = "Pass!"
+				}
 			}
 			
 			function emailCheck(emailIn){
