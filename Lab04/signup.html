@@ -44,22 +44,22 @@
 <div id="signup">
 <form action="http://courses.cs.usna.edu/SY306/tools/FormChecker/submit.cgi" method="POST" id="membershipForm">
 	First Name:
-	<input type="text" name="firstname" required><br>
+	<input type="text" name="firstname" required onchange="firstCheck(this.value)"><br>
 	Last Name:
 	<input type="text" name="lastname"><br>
 	Gender:<br>
 	<input type="radio" name="gender" value="male">Male<br>
 	<input type="radio" name="gender" value="female">Female<br>
 	Email:
-	<input type="email" name="email" onchange="passwordCheck(this.value)"><br>
+	<input type="email" name="email" onchange="emailInCheck(this.value)"><br>
 	Create Password:
-	<input type="password" name="pass"><br>
+	<input type="password" name="pass" onchange="passwordCheck(this.value)"><br>
 	<input type="hidden" id="reason" name="reason" value="Membership">
 	<input type="reset" value="Reset">
 	<input type="submit" value="Submit"><br>
 	</form>
 	Comments:<br>
-	<textarea rows="5" cols="55" name="comments" form="membershipForm">
+	<textarea rows="5" cols="55" name="comments" form="membershipForm" onchange="textareaCheck(this.value)">
 		Enter Comments Here...</textarea>
 </div>
 	
