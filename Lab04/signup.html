@@ -78,13 +78,17 @@
 			}
 			
 			function textareaCheck(textIn){
-				
+				console.log(textIn)
 			}
 			
 			function submitCheck() {
 				var firstCheckTest = firstCheck(document.membershipForm.firstname.value)
+				var passCheckTest = passwordCheck(document.membershipForm.pass.value)
+				var emailCheckTest = emailInCheck(document.membershipForm.email.value)
+				var textareaCheckTest = textareaCheck(document.membershipForm.comments.value)
 				console.log(firstCheckTest)
-				if (firstCheckTest == false){
+				
+				if (firstCheckTest == false || passCheckTest == false || emailCheckTest == false || textareaCheckTest == false){
 					return false;
 				}else{
 				return true;
