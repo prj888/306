@@ -16,36 +16,6 @@ print ('''\
 <body>
 ''')
 
-oldSubmit = '''<form name="membershipForm" action="process_signup_validate.py" method="GET" id="membershipForm" onsubmit="return submitCheck()">
-	First Name:
-	<input type="text" name="firstname" required value='firstName'>
-	<span id="firstName">
-	</span><br>
-
-	Last Name:
-	<input type="text" name="lastname" value = lastName>
-	<br>
-	Gender:<br>
-	<input type="radio" name="gender" value="male">Male<br>
-	<input type="radio" name="gender" value="female">Female<br>
-	Email:
-	<input type="email" name="email" value=email>
-	<span id="email">
-	</span>
-	<br>
-	Create Password:
-	<input type="password" name="pass" value='password'>
-	<span id="password">
-	</span><br>
-	<input type="hidden" id="reason" name="reason" value="Membership">
-	<input type="reset" value="Reset">
-	<input type="submit" value="Submit" onclick="submitCheck()"><br>
-	</form>
-	Comments:<br>
-	<textarea rows="5" cols="55" name="comments" form="membershipForm" value=comments
-		Enter Comments Here...</textarea>
-	<span id="textarea">
-	</span>'''
 	
 def main():
 	error = "AN ERROR OCCURRED!"
@@ -68,6 +38,37 @@ def main():
 	# Validate Text Portion
 	test = True
 	
+	oldSubmit = '''<form name="membershipForm" action="process_signup_validate.py" method="GET" id="membershipForm" onsubmit="return submitCheck()">
+		First Name:
+		<input type="text" name="firstname" required value='firstName'>
+		<span id="firstName">
+		</span><br>
+
+		Last Name:
+		<input type="text" name="lastname" value = lastName>
+		<br>
+		Gender:<br>
+		<input type="radio" name="gender" value="male">Male<br>
+		<input type="radio" name="gender" value="female">Female<br>
+		Email:
+		<input type="email" name="email" value=email>
+		<span id="email">
+		</span>
+		<br>
+		Create Password:
+		<input type="password" name="pass" value='password'>
+		<span id="password">
+		</span><br>
+		<input type="hidden" id="reason" name="reason" value="Membership">
+		<input type="reset" value="Reset">
+		<input type="submit" value="Submit" onclick="submitCheck()"><br>
+		</form>
+		Comments:<br>
+		<textarea rows="5" cols="55" name="comments" form="membershipForm" value=comments
+			Enter Comments Here...</textarea>
+		<span id="textarea">
+		</span>'''
+		
 	if (firstName == "") or firstName == 'None':
 		print(oldSubmit)
 		#print("The first name box was unfilled, membership not complete please return to previous page!")
