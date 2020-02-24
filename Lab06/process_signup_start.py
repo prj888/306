@@ -11,7 +11,7 @@ print ('''\
 <html>
 <head>
 <meta charset = "utf-8">
-<title>Survey Feedback</title>
+<title>Signup Feedback</title>
 </head>
 <body>
 ''')
@@ -29,7 +29,7 @@ def main():
 		print(error)
 		return False
 	
-	print("SUCCESS! Thank you for signing up for an outdoor membership!")
+	print("SUCCESS! Thank you for signing up for an outdoor membership! <br>")
 	print("The email you signed up with is ",email)
 	
 main()
