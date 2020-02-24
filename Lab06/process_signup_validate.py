@@ -35,25 +35,25 @@ def main():
 	print("Password =",password)
 	print("Comments = ",comments)
 	# Validate Text Portion
-	if (firstName == "") or firstName == None:
+	if (firstName == "") or firstName == 'None':
 		print("The first name box was unfilled, membership not complete please return to previous page!")
 	else:
 		pass
 	
 	# Validate textarea
-	if (comments == "") or comments == None:
+	if (comments == "") or comments == 'None':
 		print("The comments box was unfilled, membership not complete please return to previous page!")
 	else:
 		pass
 	
 	# Validate radio buttons
-	if (gender == "") or gender == None:
+	if (gender == "") or gender == 'None':
 		print("The gender selection was unfilled, membership not complete please return to previous page!")
 	else:
 		pass
 	
 	# Validate password
-	if (password == "") or password == None:
+	if (password == "") or password == 'None':
 		print("The password box was unfilled, membership not complete please return to previous page!")
 	else:
 		digit = False
