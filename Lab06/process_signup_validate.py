@@ -78,7 +78,7 @@ def main():
 	if test == True:
 			print("SUCCESS! Thank you for signing up for an outdoor membership! <br>")
 			print("The email you signed up with is ",email)
-	else if test == False:
+	elif test == False:
 		return False
 
 	
