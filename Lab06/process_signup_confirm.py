@@ -84,7 +84,6 @@ def main():
 			print('<a href="index.html">Home</a> &nbsp;&nbsp;&nbsp;&nbsp;')
 			print('<a href="products.html">Products</a>')
 			print("</nav>")
-			print("<h1 style=text-align:center;> Paul's Outdoor Recreation</h1><br>")
 			print("SUCCESS! Thank you for signing up for an outdoor membership! <br><br>")
 			print("You signed up with the following information:")
 			print("<ul>")
