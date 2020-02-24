@@ -35,27 +35,27 @@ def main():
 	# print("Password =",password)
 	# print("Comments = ",comments)
 	# Validate Text Portion
-	test = False
+	test = True
 	
 	if (firstName == "") or firstName == 'None':
 		print("The first name box was unfilled, membership not complete please return to previous page!")
 		test = False
 	else:
-		test = True
+		pass
 	
 	# Validate textarea
 	if (comments == "") or comments == 'None':
 		print("The comments box was unfilled, membership not complete please return to previous page!")
 		test = False
 	else:
-		test = True
+		pass
 	
 	# Validate radio buttons
 	if (gender == "") or gender == 'None':
 		print("The gender selection was unfilled, membership not complete please return to previous page!")
 		test = False
 	else:
-		test = True
+		pass
 	
 	# Validate password
 	if (password == "") or password == 'None':
@@ -70,7 +70,7 @@ def main():
 			else:
 				digit = False
 		if digit == True:
-			test = True
+			pass
 		elif digit == False:
 			print("The password entered did not contain a number, membership not complete please return to previous page!")
 			test = False	
