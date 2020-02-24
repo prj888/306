@@ -18,7 +18,7 @@ print ('''\
 
 oldSubmit = '''<form name="membershipForm" action="process_signup_validate.py" method="GET" id="membershipForm" onsubmit="return submitCheck()">
 	First Name:
-	<input type="text" name="firstname" required value=firstName">
+	<input type="text" name="firstname" required value='firstName'>
 	<span id="firstName">
 	</span><br>
 
@@ -34,7 +34,7 @@ oldSubmit = '''<form name="membershipForm" action="process_signup_validate.py" m
 	</span>
 	<br>
 	Create Password:
-	<input type="password" name="pass" value=password>
+	<input type="password" name="pass" value='password'>
 	<span id="password">
 	</span><br>
 	<input type="hidden" id="reason" name="reason" value="Membership">
