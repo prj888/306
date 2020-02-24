@@ -78,6 +78,12 @@ def main():
 			test = False	
 	
 	if test == True:
+			print('<img src="Mountain_Range.jpg" style="width:100%;" alt="Mountain Range">')
+			print("<h1 style=text-align:center;> Paul's Outdoor Recreation</h1>")
+			print("<nav style=text-align:center;>")
+					print('<a href="index.html">Home</a> &nbsp;&nbsp;&nbsp;&nbsp;')
+					print('<a href="products.html">Products</a>')
+			print("</nav>")
 			print("<h1 style=text-align:center;> Paul's Outdoor Recreation</h1><br>")
 			print("SUCCESS! Thank you for signing up for an outdoor membership! <br><br>")
 			print("You signed up with the following information:")
