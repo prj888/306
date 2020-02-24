@@ -28,33 +28,39 @@ def main():
 	except:
 		print(error)
 		return False
-	print("First Name =",firstName)
-	print("Last Name=",lastName)
-	print("Gender= ",gender)
-	print("Email= ",email)
-	print("Password =",password)
-	print("Comments = ",comments)
+	# print("First Name =",firstName)
+	# print("Last Name=",lastName)
+	# print("Gender= ",gender)
+	# print("Email= ",email)
+	# print("Password =",password)
+	# print("Comments = ",comments)
 	# Validate Text Portion
+	test = False
+	
 	if (firstName == "") or firstName == 'None':
 		print("The first name box was unfilled, membership not complete please return to previous page!")
+		test = False
 	else:
-		pass
+		test = True
 	
 	# Validate textarea
 	if (comments == "") or comments == 'None':
 		print("The comments box was unfilled, membership not complete please return to previous page!")
+		test = False
 	else:
-		pass
+		test = True
 	
 	# Validate radio buttons
 	if (gender == "") or gender == 'None':
 		print("The gender selection was unfilled, membership not complete please return to previous page!")
+		test = False
 	else:
-		pass
+		test = True
 	
 	# Validate password
 	if (password == "") or password == 'None':
 		print("The password box was unfilled, membership not complete please return to previous page!")
+		test = False
 	else:
 		digit = False
 		for i in password:
@@ -64,14 +70,17 @@ def main():
 			else:
 				digit = False
 		if digit == True:
-			pass
+			test = True
 		elif digit == False:
 			print("The password entered did not contain a number, membership not complete please return to previous page!")
-				
+			test = False	
 	
-	
-	print("SUCCESS! Thank you for signing up for an outdoor membership! <br>")
-	print("The email you signed up with is ",email)
+	if test == True:
+			print("SUCCESS! Thank you for signing up for an outdoor membership! <br>")
+			print("The email you signed up with is ",email)
+	else if test == False:
+		return False
+
 	
 main()
 
