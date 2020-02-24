@@ -49,7 +49,7 @@ def main():
 	# Validate password
 	if password == "":
 		print("The password box was unfilled, membership not complete please return to previous page!")
-	else if:
+	elif:
 		digit = False
 		for i in password:
 			if i.isdigit():
@@ -59,7 +59,7 @@ def main():
 				digit = False
 		if digit == True:
 			pass
-		else if digit == False:
+		elif digit == False:
 			print("The password entered did not contain a number, membership not complete please return to previous page!")
 				
 	
