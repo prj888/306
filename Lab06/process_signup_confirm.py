@@ -78,8 +78,26 @@ def main():
 			test = False	
 	
 	if test == True:
-			print("SUCCESS! Thank you for signing up for an outdoor membership! <br>")
-			print("The email you signed up with is ",email)
+			print("<h1 style=text-align:center;> Paul's Outdoor Recreation</h1><br>")
+			print("SUCCESS! Thank you for signing up for an outdoor membership! <br><br>")
+			print("You signed up with the following information:")
+			print("<ul>")
+			print("<li>")
+			print("First Name:", firstName)
+			print("</li>")
+			print("<li>")
+			print("Last Name:", lastName)
+			print("</li>")
+			print("<li>")
+			print("Gender:", gender)
+			print("</li>")
+			print("<li>")
+			print("Email:", email)
+			print("</li>")
+			print("<li>")
+			print("Interests:", comments)
+			print("</li>")
+			print("</ul>")
 	elif test == False:
 		return False
 
