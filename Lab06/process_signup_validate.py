@@ -40,8 +40,7 @@ def main():
 	test = True
 	
 	if (firstName == "") or firstName == 'None':
-		print(oldSubmit)
-		#print("The first name box was unfilled, membership not complete please return to previous page!")
+		print("The first name box was unfilled, membership not complete please return to previous page!")
 		test = False
 	else:
 		pass
