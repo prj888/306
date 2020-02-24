@@ -28,6 +28,12 @@ def main():
 	except:
 		print(error)
 		return False
+	print("First Name =",firstName)
+	print("Last Name=",lastName)
+	print("Gender= ",gender)
+	print("Email= ",email)
+	print("Password =",password)
+	print("Comments = ",comments)
 	# Validate Text Portion
 	if firstName == "":
 		print("The first name box was unfilled, membership not complete please return to previous page!")
