@@ -79,13 +79,7 @@ def main():
 			test = False
 
 	if test == True:
-		for line in usersFile:
-			userInfo = line.split()
-			if userInfo[3] == email:
-				print("A registration already exists for the email that was entered, if this is an issue please return to the previous page.")
-				append = False
-			else:
-				append = True
+
 	elif test == False:
 		return False
 
@@ -119,8 +113,7 @@ def main():
 		#USERS File Append Data
 		string = firstName+'\t'+lastName+'\t'+gender+'\t'+email+'\t'+password+'\t'+comments+'\n'
 		usersFile.write(string)
-	elif output == False:
-		return False
+
 
 
 

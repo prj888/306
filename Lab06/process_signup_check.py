@@ -82,7 +82,15 @@ def main():
 		for line in usersFile:
 			userInfo = line.split()
 			if userInfo[3] == email:
-				print("A registration already exixts for the email that was entered, if this is an error please return to the previous page.")
+				print("A registration already exists for the email that was entered, if this is an issue please return to the previous page.")
+				append = False
+			else:
+				append = True
+				
+	elif test == False:
+		return False
+
+	if append == True:
 		print('<img src="Mountain_Range.jpg" style="width:100%;" alt="Mountain Range">')
 		print("<h1 style=text-align:center;> Paul's Outdoor Recreation</h1>")
 		print("<nav style=text-align:center;>")
@@ -116,10 +124,10 @@ def main():
 			if userInfo[3] == email:
 
 			usersFile.write(string)
-
-
-	elif test == False:
+	elif output == False:
 		return False
+
+
 
 	#ALWAYS EXECUTE
 	usersFile.close()
