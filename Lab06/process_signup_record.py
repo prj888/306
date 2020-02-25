@@ -18,6 +18,7 @@ print ('''\
 
 
 def main():
+	usersFile = open("USERES.txt", "a+")
 	error = "AN ERROR OCCURRED!"
 	try:
 		firstName = str(form.getvalue("firstname"))
@@ -78,31 +79,37 @@ def main():
 			test = False
 
 	if test == True:
-			print('<img src="Mountain_Range.jpg" style="width:100%;" alt="Mountain Range">')
-			print("<h1 style=text-align:center;> Paul's Outdoor Recreation</h1>")
-			print("<nav style=text-align:center;>")
-			print('<a href="index.html">Home</a> &nbsp;&nbsp;&nbsp;&nbsp;')
-			print('<a href="products.html">Products</a>')
-			print("</nav>")
-			print("<br>SUCCESS! Thank you for signing up for an outdoor membership! <br><br>")
-			print("You signed up with the following information:")
-			print("<ul>")
-			print("<li>")
-			print("First Name:", firstName)
-			print("</li>")
-			print("<li>")
-			print("Last Name:", lastName)
-			print("</li>")
-			print("<li>")
-			print("Gender:", gender)
-			print("</li>")
-			print("<li>")
-			print("Email:", email)
-			print("</li>")
-			print("<li>")
-			print("Interests:", comments)
-			print("</li>")
-			print("</ul>")
+		print('<img src="Mountain_Range.jpg" style="width:100%;" alt="Mountain Range">')
+		print("<h1 style=text-align:center;> Paul's Outdoor Recreation</h1>")
+		print("<nav style=text-align:center;>")
+		print('<a href="index.html">Home</a> &nbsp;&nbsp;&nbsp;&nbsp;')
+		print('<a href="products.html">Products</a>')
+		print("</nav>")
+		print("<br>SUCCESS! Thank you for signing up for an outdoor membership! <br><br>")
+		print("You signed up with the following information:")
+		print("<ul>")
+		print("<li>")
+		print("First Name:", firstName)
+		print("</li>")
+		print("<li>")
+		print("Last Name:", lastName)
+		print("</li>")
+		print("<li>")
+		print("Gender:", gender)
+		print("</li>")
+		print("<li>")
+		print("Email:", email)
+		print("</li>")
+		print("<li>")
+		print("Interests:", comments)
+		print("</li>")
+		print("</ul>")
+
+		#USERS File Append Data
+		string = firstName+'\t'+lastName+'\t'+gender+'\t'+email+'\t'+password+'\t'+comments
+		usersFile.write(string)
+
+
 	elif test == False:
 		return False
 
@@ -114,3 +121,4 @@ print ('''\
 </body>
 </html>
 ''')
+usersFile.close()
