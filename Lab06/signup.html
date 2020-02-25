@@ -7,24 +7,24 @@
 		<title>Paul's Outdoor Recreation</title>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="style.css">
-		
+
 		<script>
 			function passwordCheck(passIn){
 				console.log(passIn)
 				var digitFail = "Password must contain at least 1 digit"
 				var lenFail = "Password must be at least 6 characters!"
 				var bothFail = "Password must contain at least 1 digit and be at least 6 characters long!"
-				
+
 				var regLengthPattern = RegExp(/\b\S{6}/)
 				var lenTest = regLengthPattern.test(passIn)
-				
+
 				var regNumberPattern = RegExp(/\d+/)
 				var digitTest = regNumberPattern.test(passIn)
-				
+
 				if (lenTest == false & digitTest == false){
 					document.getElementById("password").innerHTML = bothFail
 					return false
-					
+
 				}else if (lenTest == false){
 					document.getElementById("password").innerHTML = lenFail
 					return false
@@ -36,37 +36,37 @@
 					return true
 				}
 			}
-			
+
 			function emailInCheck(emailIn){
 				console.log(emailIn)
 				var emailFail = "Improper Email Format!"
-				
+
 				var regEmailPattern = RegExp(/\w+\@\D+\.\w+/)
 				var emailTest = regEmailPattern.test(emailIn)
-				
-				
+
+
 				if (emailTest == false){
 					document.getElementById("email").innerHTML = emailFail
 					return false
-					
+
 				}else{
 					document.getElementById("email").innerHTML = "Pass!"
 					return true
 				}
 			}
-			
+
 			function firstCheck(firstIn){
 				console.log(firstIn)
 				var firstFail = "Missing First Name!"
-				
+
 				var regFirstPattern = RegExp(/\D+/)
 				var firstTest = regFirstPattern.test(firstIn)
-				
-				
+
+
 				if (firstTest == false){
 					document.getElementById("firstName").innerHTML = firstFail
 					return false
-					
+
 				}else if (firstIn == ""){
 					document.getElementById("firstName").innerHTML = firstFail
 					return false
@@ -76,30 +76,30 @@
 					return true
 				}
 			}
-			
+
 			function textareaCheck(textIn){
 				console.log(textIn)
 				var input = textIn
 				var out = input.replace(/\</g, "&lt")
 				console.log(out)
 				document.membershipForm.comments.value = out
-				
+
 			}
-			
+
 			function submitCheck() {
 				var firstCheckTest = firstCheck(document.membershipForm.firstname.value)
 				var passCheckTest = passwordCheck(document.membershipForm.pass.value)
 				var emailCheckTest = emailInCheck(document.membershipForm.email.value)
 				var textareaCheckTest = textareaCheck(document.membershipForm.comments.value)
 				console.log(firstCheckTest)
-				
+
 				if (firstCheckTest == false || passCheckTest == false || emailCheckTest == false || textareaCheckTest == false){
 					return false;
 				}else{
 				return true;
 			}
 				}
-			
+
 		</script>
 	</head>
 	<body >
@@ -118,7 +118,7 @@
 
 <!-- Membership Sign Up Form -->
 <div id="signup">
-<form name="membershipForm" action="process_signup_confirm.py" method="GET" id="membershipForm" onsubmit="return submitCheck()">
+<form name="membershipForm" action="process_signup_record.py" method="GET" id="membershipForm" onsubmit="return submitCheck()">
 	First Name:
 	<input type="text" name="firstname" required onchange="firstCheck(this.value)">
 	<span id="firstName">
@@ -149,7 +149,7 @@
 	<span id="textarea">
 	</span>
 </div>
-	
+
 
 <!-- start footer section of page with contact info -->
 		<footer style=text-align:center;>
