@@ -75,15 +75,15 @@ def main():
 		if not first:
 			append = True
 		else:
-			pass
-		for line in usersFile:
-			print("for")
-			userInfo = line.split()
-			if userInfo[3] == email:
-				print("A registration already exists for the email that was entered, if this is an issue please return to the previous page.")
-				append = False
-			else:
-				append = True
+			for line in usersFile:
+				print("for")
+				userInfo = line.split()
+				print(userInfo[3])
+				if userInfo[3] == email:
+					print("A registration already exists for the email that was entered, if this is an issue please return to the previous page.")
+					append = False
+				else:
+					append = True
 				
 	elif test == False:
 		append = False
