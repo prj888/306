@@ -121,7 +121,7 @@ def main():
 
 		#USERS File Append Data
 		usersFile.seek(0,os.SEEK_END)
-		string = firstName+'\t'+lastName+'\t'+gender+'\t'+email+'\t'+password+'\t'+comments+'\n'
+		string = firstName+'\t'+lastName+'\t'+gender+'\t'+email+'\t'+password+'\t'+comments
 		usersFile.write(string)
 	elif append == False:
 		return False
