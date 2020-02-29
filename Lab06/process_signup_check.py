@@ -77,6 +77,7 @@ def main():
 		else:
 			pass
 		for line in usersFile:
+			print("for")
 			userInfo = line.split()
 			if userInfo[3] == email:
 				print("A registration already exists for the email that was entered, if this is an issue please return to the previous page.")
