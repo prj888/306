@@ -82,6 +82,7 @@ def main():
 		elif digit == True:
 			print("elif")
 			test = True
+			print("TEST: ",test)
 	print("CHECK POINT 4")
 	if test == True:
 		for line in usersFile:
