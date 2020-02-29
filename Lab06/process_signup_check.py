@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import cgi
 import cgitb; cgitb.enable()
+import os
 
 form = cgi.FieldStorage()
 
@@ -18,7 +19,7 @@ print ('''\
 
 
 def main():
-	usersFile = open("USERS.txt", "r+")
+	usersFile = open("USERS.txt", "a+")
 	error = "AN ERROR OCCURRED!"
 	try:
 		firstName = str(form.getvalue("firstname"))
