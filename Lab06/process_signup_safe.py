@@ -92,7 +92,7 @@ def main():
 		email = html.escape(email)
 		comments = html.escape(comments)
 		password = html.escape(password)
-		print(firtName)
+		print(firstName)
 #Display success message
 		print('<img src="Mountain_Range.jpg" style="width:100%;" alt="Mountain Range">')
 		print("<h1 style=text-align:center;> Paul's Outdoor Recreation</h1>")
