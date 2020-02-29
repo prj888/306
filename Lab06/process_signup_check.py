@@ -50,17 +50,13 @@ def main():
 	if (comments == "") or comments == 'None':
 		print("The comments box was unfilled, membership not complete please return to previous page!")
 		test = False
-	else:
-		pass
+
 
 	# Validate radio buttons
-	if (gender == "") or gender == 'None':
+	elif (gender == "") or gender == 'None':
 		print("The gender selection was unfilled, membership not complete please return to previous page!")
 		test = False
-	else:
-		pass
-
-	# Validate password
+		# Validate password
 	if (password == "") or password == 'None':
 		print("The password box was unfilled, membership not complete please return to previous page!")
 		test = False
@@ -72,11 +68,11 @@ def main():
 				break
 			else:
 				digit = False
-		if digit == True:
-			pass
-		elif digit == False:
+		if digit == False:
 			print("The password entered did not contain a number, membership not complete please return to previous page!")
 			test = False
+		elif digit == True:
+			test = True
 
 	if test == True:
 		for line in usersFile:
