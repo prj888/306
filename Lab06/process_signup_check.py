@@ -74,7 +74,9 @@ def main():
 		first = usersFile.read(1)
 		if not first:
 			append = True
+			print("if not")
 		else:
+			print("else")
 			for line in usersFile:
 				print("for")
 				userInfo = line.split()
