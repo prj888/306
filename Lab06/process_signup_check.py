@@ -86,6 +86,11 @@ def main():
 	print("CHECK POINT 4")
 	if test == True:
 		print("IF")
+		first = usersFile.read(1)
+		if not first:
+			append = True
+		else:
+			pass
 		for line in usersFile:
 			print("for")
 			userInfo = line.split()
