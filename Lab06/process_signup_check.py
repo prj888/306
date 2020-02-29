@@ -39,28 +39,32 @@ def main():
 	# Validate Text Portion
 	test = True
 	append = False
-
+	print("CHECK POINT 1")
 	if (firstName == "") or firstName == 'None':
 		print("The first name box was unfilled, membership not complete please return to previous page!")
 		test = False
+		print("IF")
 	else:
+		print("ELSE")
 		pass
-
+	print("CHECK POINT 1")
 	# Validate textarea
 	if (comments == "") or comments == 'None':
 		print("The comments box was unfilled, membership not complete please return to previous page!")
 		test = False
-
+		print("IF)")
 
 	# Validate radio buttons
 	elif (gender == "") or gender == 'None':
 		print("The gender selection was unfilled, membership not complete please return to previous page!")
 		test = False
+		print("ELIF")
 		# Validate password
-	if (password == "") or password == 'None':
+	elif (password == "") or password == 'None':
 		print("The password box was unfilled, membership not complete please return to previous page!")
 		test = False
 	else:
+		print("ELSE")
 		digit = False
 		for i in password:
 			if i.isdigit():
@@ -73,7 +77,7 @@ def main():
 			test = False
 		elif digit == True:
 			test = True
-
+	print("CHECK POINT 3")
 	if test == True:
 		for line in usersFile:
 			userInfo = line.split()
@@ -86,7 +90,7 @@ def main():
 	elif test == False:
 		append = False
 		return False
-
+	print("CHECK POINT 4")
 	if append == True:
 		print('<img src="Mountain_Range.jpg" style="width:100%;" alt="Mountain Range">')
 		print("<h1 style=text-align:center;> Paul's Outdoor Recreation</h1>")
@@ -121,7 +125,7 @@ def main():
 		return False
 
 
-
+	print("CHECK POINT 5")
 	#ALWAYS EXECUTE
 	usersFile.close()
 
