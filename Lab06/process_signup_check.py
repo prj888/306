@@ -18,7 +18,7 @@ print ('''\
 
 
 def main():
-	usersFile = open("USERS.txt", "ra+")
+	usersFile = open("USERS.txt", "r+")
 	error = "AN ERROR OCCURRED!"
 	try:
 		firstName = str(form.getvalue("firstname"))
