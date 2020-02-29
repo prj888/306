@@ -88,6 +88,7 @@ def main():
 				append = True
 				
 	elif test == False:
+		append = False
 		return False
 
 	if append == True:
