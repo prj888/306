@@ -19,7 +19,7 @@ print ('''\
 
 
 def main():
-	usersFile = open("USERS.txt", "a+")
+	usersFile = open("USERS.txt", "r+")
 	error = "AN ERROR OCCURRED!"
 	try:
 		firstName = str(form.getvalue("firstname"))
@@ -77,6 +77,7 @@ def main():
 			append = True
 			print("if not")
 		else:
+			usersFile.seek(0, os.SEEK_SET)
 			print("else")
 			for line in usersFile:
 				print("for")
@@ -119,6 +120,7 @@ def main():
 		print("</ul>")
 
 		#USERS File Append Data
+		usersFile.seek(0,os.SEEK_END)
 		string = firstName+'\t'+lastName+'\t'+gender+'\t'+email+'\t'+password+'\t'+comments+'\n'
 		usersFile.write(string)
 	elif append == False:
