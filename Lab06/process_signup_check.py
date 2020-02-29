@@ -86,6 +86,7 @@ def main():
 				if userInfo[3] == email:
 					print("A registration already exists for the email that was entered, if this is an issue please return to the previous page.")
 					append = False
+					return False
 				else:
 					append = True
 				
