@@ -75,14 +75,10 @@ def main():
 		first = usersFile.read(1)
 		if not first:
 			append = True
-			print("if not")
 		else:
 			usersFile.seek(0, os.SEEK_SET)
-			print("else")
 			for line in usersFile:
-				print("for")
 				userInfo = line.split()
-				print(userInfo[3])
 				if userInfo[3] == email:
 					print("A registration already exists for the email that was entered, if this is an issue please return to the previous page.")
 					append = False
