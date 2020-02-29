@@ -47,7 +47,7 @@ def main():
 	else:
 		print("ELSE")
 		pass
-	print("CHECK POINT 1")
+	print("CHECK POINT 2")
 	# Validate textarea
 	if (comments == "") or comments == 'None':
 		print("The comments box was unfilled, membership not complete please return to previous page!")
@@ -67,17 +67,22 @@ def main():
 		print("ELSE")
 		digit = False
 		for i in password:
+			print("for")
 			if i.isdigit():
+				print("if")
 				digit = True
 				break
 			else:
+				print("else")
 				digit = False
+		print("CHECK POINT 3")
 		if digit == False:
 			print("The password entered did not contain a number, membership not complete please return to previous page!")
 			test = False
 		elif digit == True:
+			print("elif")
 			test = True
-	print("CHECK POINT 3")
+	print("CHECK POINT 4")
 	if test == True:
 		for line in usersFile:
 			userInfo = line.split()
@@ -85,12 +90,13 @@ def main():
 				print("A registration already exists for the email that was entered, if this is an issue please return to the previous page.")
 				append = False
 			else:
+				print("else")
 				append = True
 				
 	elif test == False:
 		append = False
 		return False
-	print("CHECK POINT 4")
+	print("CHECK POINT 5")
 	if append == True:
 		print('<img src="Mountain_Range.jpg" style="width:100%;" alt="Mountain Range">')
 		print("<h1 style=text-align:center;> Paul's Outdoor Recreation</h1>")
@@ -122,6 +128,7 @@ def main():
 		string = firstName+'\t'+lastName+'\t'+gender+'\t'+email+'\t'+password+'\t'+comments+'\n'
 		usersFile.write(string)
 	elif append == False:
+		print("elif)")
 		return False
 
 
