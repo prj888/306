@@ -85,7 +85,9 @@ def main():
 			print("TEST: ",test)
 	print("CHECK POINT 4")
 	if test == True:
+		print("IF")
 		for line in usersFile:
+			print("for")
 			userInfo = line.split()
 			if userInfo[3] == email:
 				print("A registration already exists for the email that was entered, if this is an issue please return to the previous page.")
@@ -93,6 +95,7 @@ def main():
 			else:
 				print("else")
 				append = True
+				print("APPEND: ",append)
 				
 	elif test == False:
 		append = False
