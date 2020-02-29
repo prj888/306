@@ -38,7 +38,7 @@ def main():
 	# print("Comments = ",comments)
 	# Validate Text Portion
 	test = True
-
+	append = False
 
 	if (firstName == "") or firstName == 'None':
 		print("The first name box was unfilled, membership not complete please return to previous page!")
