@@ -119,12 +119,8 @@ def main():
 
 		#USERS File Append Data
 		string = firstName+'\t'+lastName+'\t'+gender+'\t'+email+'\t'+password+'\t'+comments+'\n'
-		for line in usersFile:
-			userInfo = line.split()
-			if userInfo[3] == email:
-
-			usersFile.write(string)
-	elif output == False:
+		usersFile.write(string)
+	elif append == False:
 		return False
 
 
