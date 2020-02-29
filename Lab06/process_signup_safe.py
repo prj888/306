@@ -85,14 +85,14 @@ def main():
 		append = False
 		return False
 	if append == True:
-        #escape non-valid symbols "<>&"
-        firstName = html.escape(firstName)
-        lastName = html.escape(lastName)
-        gender = html.escape(gender)
-        email = html.escape(email)
-        comments = html.escape(comments)
-        password = html.escape(password)
-        #Display success message
+		#escape non-valid symbols "<>&"
+		firstName = html.escape(firstName)
+		lastName = html.escape(lastName)
+		gender = html.escape(gender)
+		email = html.escape(email)
+		comments = html.escape(comments)
+		password = html.escape(password)
+#Display success message
 		print('<img src="Mountain_Range.jpg" style="width:100%;" alt="Mountain Range">')
 		print("<h1 style=text-align:center;> Paul's Outdoor Recreation</h1>")
 		print("<nav style=text-align:center;>")
